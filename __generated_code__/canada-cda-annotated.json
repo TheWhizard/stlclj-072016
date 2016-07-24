@@ -1,0 +1,948 @@
+{
+  "CDA" : {
+    "record" : {
+      "comments" : [ [ "comment", [ "comment-text", "#####################################################################" ] ], [ "comment", [ "comment-text", "# the comment construct was overloaded to be able include metadata, JSON, before any element to guide code generation" ] ], [ "comment", [ "comment-text", "# check the EBNF and look at the production rules on how the distinguish comments from metadata annotations" ] ], [ "comment", [ "comment-text", "#####################################################################" ] ], [ "comment", [ "comment-text", "#####################################################################" ] ], [ "comment", [ "comment-text", "# root/record definition" ] ], [ "comment", [ "comment-text", "#####################################################################" ] ] ],
+      "meta" : {
+        "language" : "cpp"
+      },
+      "name" : "Block0",
+      "root-block" : "Block0",
+      "remarks" : [ [ "remark", "" ] ]
+    },
+    "blocks" : [ {
+      "block" : {
+        "comments" : [ [ "comment", [ "comment-text", "#####################################################################" ] ], [ "comment", [ "comment-text", "# Commmon Header Block" ] ], [ "comment", [ "comment-text", "#####################################################################" ] ] ],
+        "meta" : {
+          "code-generate" : true,
+          "combine-generator" : "root-combine",
+          "is-root" : true
+        },
+        "name" : "Block0",
+        "remarks" : [ [ "remark", "Common Header Block " ], [ "remark", "" ] ],
+        "values" : [ {
+          "value" : {
+            "comments" : [ ],
+            "meta" : {
+              "nullable" : false,
+              "filter-field" : true,
+              "key-field" : false,
+              "combine-field" : false,
+              "history-field" : false,
+              "validation-regex" : "\\d{8}"
+            },
+            "name" : "FirstDate",
+            "type" : "date-type",
+            "sub-type" : "date-format",
+            "remarks" : [ [ "remark", "a comment " ], [ "remark", "a comment " ], [ "remark", "" ] ]
+          }
+        }, {
+          "value" : {
+            "comments" : [ ],
+            "meta" : {
+              "nullable" : false,
+              "filter-field" : true,
+              "key-field" : false,
+              "combine-field" : true,
+              "history-field" : false,
+              "validation-regex" : "\\d{8}"
+            },
+            "name" : "LastDate",
+            "type" : "date-type",
+            "sub-type" : "date-format",
+            "remarks" : [ [ "remark", "a comment " ], [ "remark", "" ] ]
+          }
+        }, {
+          "value" : {
+            "comments" : [ ],
+            "meta" : {
+              "nullable" : false,
+              "filter-field" : true,
+              "key-field" : true,
+              "combine-field" : false,
+              "history-field" : false,
+              "validation-regex" : ""
+            },
+            "name" : "Source",
+            "type" : "string-type",
+            "sub-type" : "no-sub-type",
+            "remarks" : [ [ "remark", "a comment " ], [ "remark", "" ] ]
+          }
+        }, {
+          "value" : {
+            "comments" : [ ],
+            "meta" : {
+              "nullable" : false,
+              "filter-field" : true,
+              "key-field" : true,
+              "combine-field" : false,
+              "history-field" : false,
+              "validation-regex" : ""
+            },
+            "name" : "Key",
+            "type" : "string-type",
+            "sub-type" : "no-sub-type",
+            "remarks" : [ [ "remark", "a comment " ], [ "remark", "" ] ]
+          }
+        }, {
+          "value" : {
+            "comments" : [ ],
+            "meta" : {
+              "nullable" : true,
+              "filter-field" : false,
+              "key-field" : false,
+              "combine-field" : true,
+              "history-field" : false,
+              "validation-regex" : ""
+            },
+            "name" : "VersionNumber",
+            "type" : "number-type",
+            "sub-type" : "no-sub-type",
+            "remarks" : [ [ "remark", "a comment " ], [ "remark", "" ] ]
+          }
+        } ],
+        "iterators" : [ {
+          "iterator" : {
+            "comments" : [ [ "comment", [ "comment-text", "# general information (priority 1)" ] ] ],
+            "meta" : {
+              "check-exists" : true
+            },
+            "name" : "Block1",
+            "block-name" : "Block1",
+            "remarks" : [ [ "remark", "Block1 " ], [ "remark", "" ] ]
+          }
+        }, {
+          "iterator" : {
+            "comments" : [ [ "comment", [ "comment-text", "# demographics information (priority 1)" ] ] ],
+            "meta" : {
+              "check-exists" : true
+            },
+            "name" : "Block2",
+            "block-name" : "Block2",
+            "remarks" : [ [ "remark", "Block2 " ], [ "remark", "" ] ]
+          }
+        } ]
+      }
+    }, {
+      "block" : {
+        "comments" : [ [ "comment", [ "comment-text", "#####################################################################" ] ], [ "comment", [ "comment-text", "# General Information - change rate: infrequent" ] ], [ "comment", [ "comment-text", "#####################################################################" ] ] ],
+        "meta" : {
+          "code-generate" : true,
+          "combine-generator" : "child-combine",
+          "history-block" : "Block1H"
+        },
+        "name" : "Block1",
+        "remarks" : [ [ "remark", "General Information " ], [ "remark", "" ] ],
+        "values" : [ {
+          "value" : {
+            "comments" : [ ],
+            "meta" : {
+              "combine-field" : false,
+              "datecheck-field" : false,
+              "validation-regex" : "\\d{8}",
+              "nochangeupdate-field" : false,
+              "nohistorymerge-field" : false,
+              "key-field" : false,
+              "filter-field" : true,
+              "nullable" : false,
+              "history-field" : true
+            },
+            "name" : "FirstDate",
+            "type" : "date-type",
+            "sub-type" : "date-format",
+            "remarks" : [ [ "remark", "a comment " ], [ "remark", "a comment " ], [ "remark", "" ] ]
+          }
+        }, {
+          "value" : {
+            "comments" : [ ],
+            "meta" : {
+              "combine-field" : false,
+              "datecheck-field" : true,
+              "validation-regex" : "\\d{8}",
+              "nochangeupdate-field" : true,
+              "nohistorymerge-field" : false,
+              "key-field" : false,
+              "filter-field" : true,
+              "nullable" : false,
+              "history-field" : true
+            },
+            "name" : "LastDate",
+            "type" : "date-type",
+            "sub-type" : "date-format",
+            "remarks" : [ [ "remark", "a comment " ], [ "remark", "" ] ]
+          }
+        }, {
+          "value" : {
+            "comments" : [ ],
+            "meta" : {
+              "combine-field" : true,
+              "datecheck-field" : false,
+              "validation-regex" : "",
+              "nochangeupdate-field" : false,
+              "nohistorymerge-field" : false,
+              "key-field" : false,
+              "filter-field" : false,
+              "nullable" : false,
+              "history-field" : true
+            },
+            "name" : "OrganizationCode",
+            "type" : "string-type",
+            "sub-type" : "no-sub-type",
+            "remarks" : [ [ "remark", "a comment " ], [ "remark", "" ] ]
+          }
+        }, {
+          "value" : {
+            "comments" : [ ],
+            "meta" : {
+              "combine-field" : true,
+              "datecheck-field" : false,
+              "validation-regex" : "",
+              "nochangeupdate-field" : false,
+              "nohistorymerge-field" : false,
+              "key-field" : false,
+              "filter-field" : false,
+              "nullable" : false,
+              "history-field" : true
+            },
+            "name" : "OrganizationName",
+            "type" : "string-type",
+            "sub-type" : "no-sub-type",
+            "remarks" : [ [ "remark", "a comment " ], [ "remark", "" ] ]
+          }
+        }, {
+          "value" : {
+            "comments" : [ ],
+            "meta" : {
+              "combine-field" : true,
+              "datecheck-field" : false,
+              "validation-regex" : "",
+              "nochangeupdate-field" : false,
+              "nohistorymerge-field" : false,
+              "key-field" : false,
+              "filter-field" : false,
+              "nullable" : false,
+              "history-field" : true
+            },
+            "name" : "OrganizationAddress1",
+            "type" : "string-type",
+            "sub-type" : "no-sub-type",
+            "remarks" : [ [ "remark", "Organization address 1 " ], [ "remark", "" ] ]
+          }
+        }, {
+          "value" : {
+            "comments" : [ ],
+            "meta" : {
+              "combine-field" : true,
+              "datecheck-field" : false,
+              "validation-regex" : "",
+              "nochangeupdate-field" : false,
+              "nohistorymerge-field" : false,
+              "key-field" : false,
+              "filter-field" : false,
+              "nullable" : true,
+              "history-field" : true
+            },
+            "name" : "OrganizationAddress2",
+            "type" : "string-type",
+            "sub-type" : "no-sub-type",
+            "remarks" : [ [ "remark", "Organization address 2 " ], [ "remark", "" ] ]
+          }
+        }, {
+          "value" : {
+            "comments" : [ ],
+            "meta" : {
+              "combine-field" : true,
+              "datecheck-field" : false,
+              "validation-regex" : "",
+              "nochangeupdate-field" : false,
+              "nohistorymerge-field" : false,
+              "key-field" : false,
+              "filter-field" : false,
+              "nullable" : false,
+              "history-field" : true
+            },
+            "name" : "OrganizationCity",
+            "type" : "string-type",
+            "sub-type" : "no-sub-type",
+            "remarks" : [ [ "remark", "Organization city " ], [ "remark", "" ] ]
+          }
+        }, {
+          "value" : {
+            "comments" : [ ],
+            "meta" : {
+              "combine-field" : true,
+              "datecheck-field" : false,
+              "validation-regex" : "",
+              "nochangeupdate-field" : false,
+              "nohistorymerge-field" : false,
+              "key-field" : false,
+              "filter-field" : false,
+              "nullable" : false,
+              "history-field" : true
+            },
+            "name" : "OrganizationProvince",
+            "type" : "string-type",
+            "sub-type" : "no-sub-type",
+            "remarks" : [ [ "remark", "Organization province " ], [ "remark", "" ] ]
+          }
+        }, {
+          "value" : {
+            "comments" : [ ],
+            "meta" : {
+              "combine-field" : true,
+              "datecheck-field" : false,
+              "validation-regex" : "",
+              "nochangeupdate-field" : false,
+              "nohistorymerge-field" : false,
+              "key-field" : false,
+              "filter-field" : false,
+              "nullable" : false,
+              "history-field" : true
+            },
+            "name" : "OrganizationPostalCode",
+            "type" : "string-type",
+            "sub-type" : "no-sub-type",
+            "remarks" : [ [ "remark", "Organization postal code " ], [ "remark", "" ] ]
+          }
+        }, {
+          "value" : {
+            "comments" : [ ],
+            "meta" : {
+              "combine-field" : true,
+              "datecheck-field" : false,
+              "validation-regex" : "",
+              "nochangeupdate-field" : false,
+              "nohistorymerge-field" : false,
+              "key-field" : false,
+              "filter-field" : false,
+              "nullable" : false,
+              "history-field" : true
+            },
+            "name" : "OrganizationISOCountryCode",
+            "type" : "string-type",
+            "sub-type" : "no-sub-type",
+            "remarks" : [ [ "remark", "Organization ISO country code " ], [ "remark", "" ] ]
+          }
+        }, {
+          "value" : {
+            "comments" : [ ],
+            "meta" : {
+              "combine-field" : true,
+              "datecheck-field" : false,
+              "validation-regex" : "",
+              "nochangeupdate-field" : false,
+              "nohistorymerge-field" : false,
+              "key-field" : false,
+              "filter-field" : false,
+              "nullable" : true,
+              "history-field" : true
+            },
+            "name" : "OrganizationPhoneNumber",
+            "type" : "string-type",
+            "sub-type" : "no-sub-type",
+            "remarks" : [ [ "remark", "Organization phone number " ], [ "remark", "" ] ]
+          }
+        } ],
+        "iterators" : [ {
+          "iterator" : {
+            "comments" : [ ],
+            "meta" : { },
+            "name" : "Block1H",
+            "block-name" : "Block1H",
+            "remarks" : [ [ "remark", "Block1H " ], [ "remark", "" ] ]
+          }
+        } ]
+      }
+    }, {
+      "block" : {
+        "comments" : [ [ "comment", [ "comment-text", "#####################################################################" ] ], [ "comment", [ "comment-text", "# Block1 history" ] ], [ "comment", [ "comment-text", "#####################################################################" ] ] ],
+        "meta" : {
+          "code-generate" : false
+        },
+        "name" : "Block1H",
+        "remarks" : [ [ "remark", "Organization General Information History " ], [ "remark", "" ] ],
+        "values" : [ {
+          "value" : {
+            "comments" : [ ],
+            "meta" : { },
+            "name" : "FirstDate",
+            "type" : "date-type",
+            "sub-type" : "date-format",
+            "remarks" : [ [ "remark", "a comment " ], [ "remark", "a comment " ], [ "remark", "" ] ]
+          }
+        }, {
+          "value" : {
+            "comments" : [ ],
+            "meta" : { },
+            "name" : "LastDate",
+            "type" : "date-type",
+            "sub-type" : "date-format",
+            "remarks" : [ [ "remark", "a comment " ], [ "remark", "" ] ]
+          }
+        }, {
+          "value" : {
+            "comments" : [ ],
+            "meta" : { },
+            "name" : "OrganizationCode",
+            "type" : "string-type",
+            "sub-type" : "no-sub-type",
+            "remarks" : [ [ "remark", "a comment " ], [ "remark", "" ] ]
+          }
+        }, {
+          "value" : {
+            "comments" : [ ],
+            "meta" : { },
+            "name" : "OrganizationName",
+            "type" : "string-type",
+            "sub-type" : "no-sub-type",
+            "remarks" : [ [ "remark", "Organization name " ], [ "remark", "" ] ]
+          }
+        }, {
+          "value" : {
+            "comments" : [ ],
+            "meta" : { },
+            "name" : "OrganizationAddress1",
+            "type" : "string-type",
+            "sub-type" : "no-sub-type",
+            "remarks" : [ [ "remark", "Organization address 1 " ], [ "remark", "" ] ]
+          }
+        }, {
+          "value" : {
+            "comments" : [ ],
+            "meta" : { },
+            "name" : "OrganizationAddress2",
+            "type" : "string-type",
+            "sub-type" : "no-sub-type",
+            "remarks" : [ [ "remark", "Organization address 2 " ], [ "remark", "" ] ]
+          }
+        }, {
+          "value" : {
+            "comments" : [ ],
+            "meta" : { },
+            "name" : "OrganizationCity",
+            "type" : "string-type",
+            "sub-type" : "no-sub-type",
+            "remarks" : [ [ "remark", "Organization city " ], [ "remark", "" ] ]
+          }
+        }, {
+          "value" : {
+            "comments" : [ ],
+            "meta" : { },
+            "name" : "OrganizationProvince",
+            "type" : "string-type",
+            "sub-type" : "no-sub-type",
+            "remarks" : [ [ "remark", "Organization province " ], [ "remark", "" ] ]
+          }
+        }, {
+          "value" : {
+            "comments" : [ ],
+            "meta" : { },
+            "name" : "OrganizationPostalCode",
+            "type" : "string-type",
+            "sub-type" : "no-sub-type",
+            "remarks" : [ [ "remark", "Organization postal code " ], [ "remark", "" ] ]
+          }
+        }, {
+          "value" : {
+            "comments" : [ ],
+            "meta" : { },
+            "name" : "OrganizationISOCountryCode",
+            "type" : "string-type",
+            "sub-type" : "no-sub-type",
+            "remarks" : [ [ "remark", "Organization ISO country code " ], [ "remark", "" ] ]
+          }
+        }, {
+          "value" : {
+            "comments" : [ ],
+            "meta" : { },
+            "name" : "OrganizationPhoneNumber",
+            "type" : "string-type",
+            "sub-type" : "no-sub-type",
+            "remarks" : [ [ "remark", "Organization phone number " ], [ "remark", "" ] ]
+          }
+        } ],
+        "iterators" : [ ]
+      }
+    }, {
+      "block" : {
+        "comments" : [ [ "comment", [ "comment-text", "#####################################################################" ] ], [ "comment", [ "comment-text", "# Subject Data Elements - change rate: infrequent" ] ], [ "comment", [ "comment-text", "#####################################################################" ] ] ],
+        "meta" : {
+          "code-generate" : true,
+          "combine-generator" : "child-combine",
+          "history-block" : " Block2H"
+        },
+        "name" : "Block2",
+        "remarks" : [ [ "remark", "Subject Demographic Information " ], [ "remark", "" ] ],
+        "values" : [ {
+          "value" : {
+            "comments" : [ ],
+            "meta" : {
+              "combine-field" : false,
+              "datecheck-field" : false,
+              "validation-regex" : "\\d{8}",
+              "nochangeupdate-field" : false,
+              "nohistorymerge-field" : false,
+              "key-field" : false,
+              "filter-field" : true,
+              "nullable" : false,
+              "history-field" : true
+            },
+            "name" : "FirstDate",
+            "type" : "date-type",
+            "sub-type" : "date-format",
+            "remarks" : [ [ "remark", "a comment " ], [ "remark", "a comment " ], [ "remark", "" ] ]
+          }
+        }, {
+          "value" : {
+            "comments" : [ ],
+            "meta" : {
+              "combine-field" : false,
+              "datecheck-field" : true,
+              "validation-regex" : "\\d{8}",
+              "nochangeupdate-field" : true,
+              "nohistorymerge-field" : false,
+              "key-field" : false,
+              "filter-field" : true,
+              "nullable" : false,
+              "history-field" : true
+            },
+            "name" : "LastDate",
+            "type" : "date-type",
+            "sub-type" : "date-format",
+            "remarks" : [ [ "remark", "a comment " ], [ "remark", "" ] ]
+          }
+        }, {
+          "value" : {
+            "comments" : [ ],
+            "meta" : {
+              "combine-field" : true,
+              "datecheck-field" : false,
+              "validation-regex" : "",
+              "nochangeupdate-field" : false,
+              "nohistorymerge-field" : false,
+              "key-field" : false,
+              "filter-field" : false,
+              "nullable" : false,
+              "history-field" : true
+            },
+            "name" : "SubjectID",
+            "type" : "number-type",
+            "sub-type" : "no-sub-type",
+            "remarks" : [ [ "remark", "a comment " ], [ "remark", "" ] ]
+          }
+        }, {
+          "value" : {
+            "comments" : [ ],
+            "meta" : {
+              "combine-field" : true,
+              "datecheck-field" : false,
+              "validation-regex" : "",
+              "nochangeupdate-field" : false,
+              "nohistorymerge-field" : false,
+              "key-field" : false,
+              "filter-field" : false,
+              "nullable" : false,
+              "history-field" : true
+            },
+            "name" : "SubjectFirstName",
+            "type" : "string-type",
+            "sub-type" : "no-sub-type",
+            "remarks" : [ [ "remark", "Subject First Name " ], [ "remark", "" ] ]
+          }
+        }, {
+          "value" : {
+            "comments" : [ ],
+            "meta" : {
+              "combine-field" : true,
+              "datecheck-field" : false,
+              "validation-regex" : "",
+              "nochangeupdate-field" : false,
+              "nohistorymerge-field" : false,
+              "key-field" : false,
+              "filter-field" : false,
+              "nullable" : true,
+              "history-field" : true
+            },
+            "name" : "SubjectMiddleName",
+            "type" : "string-type",
+            "sub-type" : "no-sub-type",
+            "remarks" : [ [ "remark", "Subject Middle Name " ], [ "remark", "" ] ]
+          }
+        }, {
+          "value" : {
+            "comments" : [ ],
+            "meta" : {
+              "combine-field" : true,
+              "datecheck-field" : false,
+              "validation-regex" : "",
+              "nochangeupdate-field" : false,
+              "nohistorymerge-field" : false,
+              "key-field" : false,
+              "filter-field" : false,
+              "nullable" : false,
+              "history-field" : true
+            },
+            "name" : "SubjectLastName",
+            "type" : "string-type",
+            "sub-type" : "no-sub-type",
+            "remarks" : [ [ "remark", "Subject Last Name " ], [ "remark", "" ] ]
+          }
+        }, {
+          "value" : {
+            "comments" : [ ],
+            "meta" : {
+              "combine-field" : true,
+              "datecheck-field" : false,
+              "validation-regex" : "",
+              "nochangeupdate-field" : false,
+              "nohistorymerge-field" : false,
+              "key-field" : false,
+              "filter-field" : false,
+              "nullable" : false,
+              "history-field" : true
+            },
+            "name" : "SubjectDateOfBirth",
+            "type" : "date-type",
+            "sub-type" : "date-format",
+            "remarks" : [ [ "remark", "Subject Date Of Birth " ], [ "remark", "" ] ]
+          }
+        }, {
+          "value" : {
+            "comments" : [ ],
+            "meta" : {
+              "combine-field" : false,
+              "datecheck-field" : false,
+              "validation-regex" : "",
+              "nochangeupdate-field" : false,
+              "nohistorymerge-field" : false,
+              "key-field" : false,
+              "filter-field" : false,
+              "nullable" : false,
+              "history-field" : true
+            },
+            "name" : "SubjectAddress1",
+            "type" : "string-type",
+            "sub-type" : "no-sub-type",
+            "remarks" : [ [ "remark", "Subject Address 1 (home) " ], [ "remark", "" ] ]
+          }
+        }, {
+          "value" : {
+            "comments" : [ ],
+            "meta" : {
+              "combine-field" : true,
+              "datecheck-field" : false,
+              "validation-regex" : "",
+              "nochangeupdate-field" : false,
+              "nohistorymerge-field" : false,
+              "key-field" : false,
+              "filter-field" : false,
+              "nullable" : true,
+              "history-field" : true
+            },
+            "name" : "SubjectAddress2",
+            "type" : "string-type",
+            "sub-type" : "no-sub-type",
+            "remarks" : [ [ "remark", "Subject Address 2 (home) " ], [ "remark", "" ] ]
+          }
+        }, {
+          "value" : {
+            "comments" : [ ],
+            "meta" : {
+              "combine-field" : true,
+              "datecheck-field" : false,
+              "validation-regex" : "",
+              "nochangeupdate-field" : false,
+              "nohistorymerge-field" : false,
+              "key-field" : false,
+              "filter-field" : false,
+              "nullable" : false,
+              "history-field" : true
+            },
+            "name" : "SubjectCity",
+            "type" : "string-type",
+            "sub-type" : "no-sub-type",
+            "remarks" : [ [ "remark", "Subject City (home) " ], [ "remark", "" ] ]
+          }
+        }, {
+          "value" : {
+            "comments" : [ ],
+            "meta" : {
+              "combine-field" : true,
+              "datecheck-field" : false,
+              "validation-regex" : "",
+              "nochangeupdate-field" : false,
+              "nohistorymerge-field" : false,
+              "key-field" : false,
+              "filter-field" : false,
+              "nullable" : false,
+              "history-field" : true
+            },
+            "name" : "SubjectProvince",
+            "type" : "string-type",
+            "sub-type" : "no-sub-type",
+            "remarks" : [ [ "remark", "Subject Province (home) " ], [ "remark", "" ] ]
+          }
+        }, {
+          "value" : {
+            "comments" : [ ],
+            "meta" : {
+              "combine-field" : false,
+              "datecheck-field" : false,
+              "validation-regex" : "",
+              "nochangeupdate-field" : false,
+              "nohistorymerge-field" : false,
+              "key-field" : false,
+              "filter-field" : false,
+              "nullable" : false,
+              "history-field" : true
+            },
+            "name" : "SubjectPostalCode",
+            "type" : "string-type",
+            "sub-type" : "no-sub-type",
+            "remarks" : [ [ "remark", "Subject Postal Code (home) " ], [ "remark", "" ] ]
+          }
+        }, {
+          "value" : {
+            "comments" : [ ],
+            "meta" : {
+              "combine-field" : true,
+              "datecheck-field" : false,
+              "validation-regex" : "",
+              "nochangeupdate-field" : false,
+              "nohistorymerge-field" : false,
+              "key-field" : false,
+              "filter-field" : false,
+              "nullable" : false,
+              "history-field" : true
+            },
+            "name" : "SubjectISOCountryCode",
+            "type" : "string-type",
+            "sub-type" : "no-sub-type",
+            "remarks" : [ [ "remark", "Subject ISO Country Code (home) " ], [ "remark", "" ] ]
+          }
+        }, {
+          "value" : {
+            "comments" : [ ],
+            "meta" : {
+              "combine-field" : true,
+              "datecheck-field" : false,
+              "validation-regex" : "",
+              "nochangeupdate-field" : false,
+              "nohistorymerge-field" : false,
+              "key-field" : false,
+              "filter-field" : false,
+              "nullable" : true,
+              "history-field" : true
+            },
+            "name" : "SubjectPersonalEmailAddress",
+            "type" : "string-type",
+            "sub-type" : "no-sub-type",
+            "remarks" : [ [ "remark", "Subject email address (personal) " ], [ "remark", "" ] ]
+          }
+        }, {
+          "value" : {
+            "comments" : [ ],
+            "meta" : {
+              "combine-field" : true,
+              "datecheck-field" : false,
+              "validation-regex" : "",
+              "nochangeupdate-field" : false,
+              "nohistorymerge-field" : false,
+              "key-field" : false,
+              "filter-field" : false,
+              "nullable" : true,
+              "history-field" : true
+            },
+            "name" : "SubjectHomePhoneNumber",
+            "type" : "string-type",
+            "sub-type" : "no-sub-type",
+            "remarks" : [ [ "remark", "Subject home phone number (home) " ], [ "remark", "" ] ]
+          }
+        }, {
+          "value" : {
+            "comments" : [ ],
+            "meta" : {
+              "combine-field" : true,
+              "datecheck-field" : false,
+              "validation-regex" : "",
+              "nochangeupdate-field" : false,
+              "nohistorymerge-field" : false,
+              "key-field" : false,
+              "filter-field" : false,
+              "nullable" : false,
+              "history-field" : true
+            },
+            "name" : "SubjectMobilePhoneNumber",
+            "type" : "string-type",
+            "sub-type" : "no-sub-type",
+            "remarks" : [ [ "remark", "Subject mobile phone number (personal) " ], [ "remark", "" ] ]
+          }
+        } ],
+        "iterators" : [ {
+          "iterator" : {
+            "comments" : [ ],
+            "meta" : { },
+            "name" : "Block2H",
+            "block-name" : "Block2H",
+            "remarks" : [ [ "remark", "Block2H " ], [ "remark", "" ] ]
+          }
+        } ]
+      }
+    }, {
+      "block" : {
+        "comments" : [ [ "comment", [ "comment-text", "#####################################################################" ] ], [ "comment", [ "comment-text", "# Block2 History" ] ], [ "comment", [ "comment-text", "#####################################################################" ] ] ],
+        "meta" : {
+          "code-generate" : false
+        },
+        "name" : "Block2H",
+        "remarks" : [ [ "remark", "Subject Demographic Information History " ], [ "remark", "" ] ],
+        "values" : [ {
+          "value" : {
+            "comments" : [ ],
+            "meta" : { },
+            "name" : "FirstDate",
+            "type" : "date-type",
+            "sub-type" : "date-format",
+            "remarks" : [ [ "remark", "a comment " ], [ "remark", "a comment " ], [ "remark", "" ] ]
+          }
+        }, {
+          "value" : {
+            "comments" : [ ],
+            "meta" : { },
+            "name" : "LastDate",
+            "type" : "date-type",
+            "sub-type" : "date-format",
+            "remarks" : [ [ "remark", "a comment " ], [ "remark", "" ] ]
+          }
+        }, {
+          "value" : {
+            "comments" : [ ],
+            "meta" : { },
+            "name" : "SubjectID",
+            "type" : "number-type",
+            "sub-type" : "no-sub-type",
+            "remarks" : [ [ "remark", "a comment " ], [ "remark", "" ] ]
+          }
+        }, {
+          "value" : {
+            "comments" : [ ],
+            "meta" : { },
+            "name" : "SubjectFirstName",
+            "type" : "string-type",
+            "sub-type" : "no-sub-type",
+            "remarks" : [ [ "remark", "Subject First Name " ], [ "remark", "" ] ]
+          }
+        }, {
+          "value" : {
+            "comments" : [ ],
+            "meta" : { },
+            "name" : "SubjectMiddleName",
+            "type" : "string-type",
+            "sub-type" : "no-sub-type",
+            "remarks" : [ [ "remark", "Subject Middle Name " ], [ "remark", "" ] ]
+          }
+        }, {
+          "value" : {
+            "comments" : [ ],
+            "meta" : { },
+            "name" : "SubjectLastName",
+            "type" : "string-type",
+            "sub-type" : "no-sub-type",
+            "remarks" : [ [ "remark", "Subject Last Name " ], [ "remark", "" ] ]
+          }
+        }, {
+          "value" : {
+            "comments" : [ ],
+            "meta" : { },
+            "name" : "SubjectDateOfBirth",
+            "type" : "date-type",
+            "sub-type" : "date-format",
+            "remarks" : [ [ "remark", "Subject Date Of Birth " ], [ "remark", "" ] ]
+          }
+        }, {
+          "value" : {
+            "comments" : [ ],
+            "meta" : { },
+            "name" : "SubjectAddress1",
+            "type" : "string-type",
+            "sub-type" : "no-sub-type",
+            "remarks" : [ [ "remark", "Subject Address 1 (home) " ], [ "remark", "" ] ]
+          }
+        }, {
+          "value" : {
+            "comments" : [ ],
+            "meta" : { },
+            "name" : "SubjectAddress2",
+            "type" : "string-type",
+            "sub-type" : "no-sub-type",
+            "remarks" : [ [ "remark", "Subject Address 2 (home) " ], [ "remark", "" ] ]
+          }
+        }, {
+          "value" : {
+            "comments" : [ ],
+            "meta" : { },
+            "name" : "SubjectCity",
+            "type" : "string-type",
+            "sub-type" : "no-sub-type",
+            "remarks" : [ [ "remark", "Subject City (home) " ], [ "remark", "" ] ]
+          }
+        }, {
+          "value" : {
+            "comments" : [ ],
+            "meta" : { },
+            "name" : "SubjectProvince",
+            "type" : "string-type",
+            "sub-type" : "no-sub-type",
+            "remarks" : [ [ "remark", "Subject Province (home) " ], [ "remark", "" ] ]
+          }
+        }, {
+          "value" : {
+            "comments" : [ ],
+            "meta" : { },
+            "name" : "SubjectPostalCode",
+            "type" : "string-type",
+            "sub-type" : "no-sub-type",
+            "remarks" : [ [ "remark", "Subject Postal Code (home) " ], [ "remark", "" ] ]
+          }
+        }, {
+          "value" : {
+            "comments" : [ ],
+            "meta" : { },
+            "name" : "SubjectISOCountryCode",
+            "type" : "string-type",
+            "sub-type" : "no-sub-type",
+            "remarks" : [ [ "remark", "Subject ISO Country Code (home) " ], [ "remark", "" ] ]
+          }
+        }, {
+          "value" : {
+            "comments" : [ ],
+            "meta" : { },
+            "name" : "SubjectPersonalEmailAddress",
+            "type" : "string-type",
+            "sub-type" : "no-sub-type",
+            "remarks" : [ [ "remark", "Subject email address (personal) " ], [ "remark", "" ] ]
+          }
+        }, {
+          "value" : {
+            "comments" : [ ],
+            "meta" : { },
+            "name" : "SubjectHomePhoneNumber",
+            "type" : "string-type",
+            "sub-type" : "no-sub-type",
+            "remarks" : [ [ "remark", "Subject home phone number (home) " ], [ "remark", "" ] ]
+          }
+        }, {
+          "value" : {
+            "comments" : [ ],
+            "meta" : { },
+            "name" : "SubjectMobilePhoneNumber",
+            "type" : "string-type",
+            "sub-type" : "no-sub-type",
+            "remarks" : [ [ "remark", "Subject mobile phone number (personal) " ], [ "remark", "" ] ]
+          }
+        } ],
+        "iterators" : [ ]
+      }
+    } ],
+    "comments" : [ [ "comment", [ "comment-text", "# end" ] ] ]
+  }
+}

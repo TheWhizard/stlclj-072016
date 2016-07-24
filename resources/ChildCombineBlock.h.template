@@ -1,0 +1,57 @@
+#ifndef ${BLOCK_KEY}BLOCK_H
+#define ${BLOCK_KEY}BLOCK_H
+
+using namespace ExchangeImplementationUtility;
+
+class ${BLOCK_KEY}Block  : public ABetterChildCombine
+{
+public:
+    ${BLOCK_KEY}Block(commonServices *parmpcs, ${PARENT_BLOCK_KEY}Block* parentBlock):
+        ABetterChildCombine(parmpcs, parentBlock, "${BLOCK_KEY}")
+    {
+        init();
+    }
+
+    ${BLOCK_KEY}Block(pxDataManager *parmnewpdm, pxDataManager *parmcmppdm, TransactionControlServices *parmptcs, commonServices *parmpcs, ${PARENT_BLOCK_KEY}Block* parentBlock):
+        ABetterChildCombine(parmnewpdm, parmcmppdm, parmptcs, parmpcs, parentBlock, "${BLOCK_KEY}")
+    {
+        init();
+    }
+
+    ~${BLOCK_KEY}Block(){};
+
+    void init() {
+        setCombineMetadata(&${BLOCK_KEY}Block::blockConfig_);
+    }
+
+private:
+    class BlockCombineConfig : public ABetterBaseCombine::ABetterBlockCombineConfig {
+        public:  
+        BlockCombineConfig(){
+            //TODO: register fields and key fields here
+            static const char* filterFields[] = {${COMMA_SEPARATED_FILTER_FIELDS}};
+            ABetterBaseCombine::ABetterBlockCombineConfig::registerFilterFields(filterFields, ${FILTER_FIELDS_COUNT});
+            
+            static const char* noChangeUpdateFields[]={${COMMA_SEPARATED_NO_CHANGE_UPDATE_FIELDS}};
+            ABetterBaseCombine::ABetterBlockCombineConfig::registerNoChangeUpdateFields(noChangeUpdateFields, ${NO_CHANGE_UPDATE_FIELDS_COUNT});
+            
+            static const char* combineFields[] = {${COMMA_SEPARATED_COMBINE_FIELDS}};
+            ABetterBaseCombine::ABetterBlockCombineConfig::registerCombineFields(combineFields, ${COMBINE_FIELDS_COUNT});
+
+            static const char* noHistoryMergeFields[] = {${COMMA_SEPARATED_NO_HISTORY_MERGE_FIELDS}};
+            ABetterBaseCombine::ABetterBlockCombineConfig::registerNoHistoryMergeFields(noHistoryMergeFields, ${NO_HISTORY_MERGE_FIELDS_COUNT});
+
+            static const char* dateCheckFields[] = {${COMMA_SEPARATED_DATE_CHECK_FIELDS}};
+            ABetterBaseCombine::ABetterBlockCombineConfig::registerDateCheckFields(dateCheckFields, ${DATE_CHECK_FIELDS_COUNT});
+
+            //History Block
+            ABetterBaseCombine::ABetterBlockCombineConfig::registerHistoryBlock("${BLOCK_KEY}H", true);
+            static const char* historyFields[]={${COMMA_SEPARATED_HISTORY_FIELDS}};
+            ABetterBaseCombine::ABetterBlockCombineConfig::registerHistoryFields(historyFields, ${HISTORY_FIELDS_COUNT});
+        }
+    };
+    static BlockCombineConfig blockConfig_;
+};
+
+
+#endif /* ${BLOCK_KEY}BLOCK_H */

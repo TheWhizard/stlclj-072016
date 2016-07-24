@@ -1,0 +1,20 @@
+{
+    "seasons": [
+        {
+            "season": "spring",
+            "weather": "rain"
+        },
+        {
+            "season": "summer",
+            "weather": "hot"
+        },
+        {
+            "season": "fall",
+            "weather": "nice"
+        },
+        {
+            "season": "winter",
+            "weather": "cold"
+        }
+    ]
+}

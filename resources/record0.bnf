@@ -1,0 +1,16 @@
+(* production rules *)
+record = root-record blocks comments
+root-record = comments "r" "|" name eol
+blocks = block*
+block = comments "b" "|" name eol values iterators
+values = value*
+value = comments "v" "|" name eol
+iterators = iterator*
+iterator = comments "I" "|" name eol
+comments = comment*
+
+(* terminal symbols *)
+comment = "##" comment-text eol
+comment-text = #"[^\r\n]*"
+name = #"[a-zA-Z][0-9a-zA-Z\+-_]*"
+eol = #"[\r\n]+"

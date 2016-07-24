@@ -1,0 +1,8 @@
+#include <cstdlib>
+#include <cstdio>
+#include <cstring>
+#include <algorithm>
+
+#include "${BLOCK_KEY}Block.h"
+
+${BLOCK_KEY}Block::BlockCombineConfig ${BLOCK_KEY}Block::blockConfig_;

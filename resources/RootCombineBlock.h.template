@@ -1,0 +1,45 @@
+#ifndef _${BLOCK_KEY}BLOCK_H
+#define _${BLOCK_KEY}BLOCK_H
+
+using namespace ExchangeImplementationUtility;
+        
+class ${BLOCK_KEY}Block : public ABetterRootCombine
+{
+public:
+    ${BLOCK_KEY}Block(commonServices *parmpcs):
+        ABetterRootCombine(parmpcs, "${BLOCK_KEY}")
+    {
+        init();
+    }
+
+    ${BLOCK_KEY}Block(pxDataManager *parmnewpdm, pxDataManager *parmcmppdm, TransactionControlServices *parmptcs, commonServices *parmpcs):
+        ABetterRootCombine(parmnewpdm, parmcmppdm, parmptcs, parmpcs, "${BLOCK_KEY}")
+    {
+        init();
+    }
+
+    ~${BLOCK_KEY}Block(){};
+
+    void init() {
+        setCombineMetadata(&blockConfig_);
+    }
+
+private:
+    class BlockCombineConfig : public ABetterBaseCombine::ABetterBlockCombineConfig {
+        public:
+        BlockCombineConfig() {
+
+            static const char* filterFields[] = {${COMMA_SEPARATED_FILTER_FIELDS}};
+            ABetterBaseCombine::ABetterBlockCombineConfig::registerFilterFields(filterFields, ${FILTER_FIELDS_COUNT});
+
+            static const char* keyFields[] = {${COMMA_SEPARATED_KEY_FIELDS}};
+            ABetterBaseCombine::ABetterBlockCombineConfig::registerKeyFields(keyFields, ${KEY_FIELDS_COUNT});
+
+            static const char* combineFields[] = {${COMMA_SEPARATED_COMBINE_FIELDS}};
+            ABetterBaseCombine::ABetterBlockCombineConfig::registerCombineFields(combineFields, ${COMBINE_FIELDS_COUNT});
+        }
+    };
+    static BlockCombineConfig blockConfig_;
+};
+
+#endif /* ${BLOCK_KEY}BLOCK_H */

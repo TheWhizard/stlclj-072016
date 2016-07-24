@@ -1,0 +1,5 @@
+{:seasons [
+    {:name "spring" :weather "rain"}
+    {:name "summer" :weather "hot"}
+    {:name "fall" :weather "nice"}
+    {:name "winter" :weather "cold"}]}

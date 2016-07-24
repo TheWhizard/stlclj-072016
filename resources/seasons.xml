@@ -1,0 +1,18 @@
+<seasons>
+    <season>
+        <name>spring</name>
+        <weather>rain</weather>
+    </season>
+    <season>
+        <name>summer</name>
+        <weather>hot</weather>
+    </season>
+    <season>
+        <name>fall</name>
+        <weather>nice</weather>
+    </season>
+    <season>
+        <name>winter</name>
+        <weather>cold</weather>
+    </season>
+</seasons>

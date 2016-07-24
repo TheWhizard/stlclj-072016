@@ -1,0 +1,141 @@
+######################################################################
+## the comment construct was overloaded to be able include metadata, JSON, before any element to guide code generation
+## check the EBNF and look at the production rules on how the distinguish comments from metadata annotations
+######################################################################
+
+######################################################################
+## root/record definition
+######################################################################
+#@record-meta: { "language":"cpp" }
+r| Block0 | Block0 |
+
+######################################################################
+## Commmon Header Block
+######################################################################
+#@block-meta: { "code-generate":true, "combine-generator":"root-combine", "is-root":true }
+b| Block0 | Common Header Block | 
+#@value-meta: { "nullable":false, "filter-field":true, "key-field":false, "combine-field":false, "history-field":false, "validation-regex":"\\d{8}" }
+v| FirstDate | date | YYYYMMDD | a comment | a comment | 
+#@value-meta: { "nullable":false, "filter-field":true, "key-field":false, "combine-field":true, "history-field":false, "validation-regex":"\\d{8}" }
+v| LastDate | date | YYYYMMDD | a comment |
+#@value-meta: { "nullable":false, "filter-field":true, "key-field":true, "combine-field":false, "history-field":false, "validation-regex":"" }
+v| Source | string | | a comment |
+#@value-meta: { "nullable":false, "filter-field":true, "key-field":true, "combine-field":false, "history-field":false, "validation-regex":"" }
+v| Key | string | | a comment |
+#@value-meta: { "nullable":true, "filter-field":false, "key-field":false, "combine-field":true, "history-field":false, "validation-regex":"" }
+v| VersionNumber | number | | a comment |
+## general information (priority 1)
+#@iterator-meta: {  "check-exists":true }
+I| Block1 | Block1 | Block1 |
+## demographics information (priority 1)
+#@iterator-meta: {  "check-exists":true }
+I| Block2 | Block2 | Block2 |
+
+######################################################################
+## General Information - change rate: infrequent
+######################################################################
+#@block-meta: { "code-generate":true, "combine-generator":"child-combine"  "history-block":"Block1H" }
+b| Block1 | General Information |
+#@value-meta: { "nullable":false, "filter-field":true, "key-field":false, "nochangeupdate-field":false, "combine-field":false, "history-field":true, "nohistorymerge-field":false , "datecheck-field":false,  "validation-regex":"\\d{8}" }
+v| FirstDate | date | YYYYMMDD | a comment | a comment | 
+#@value-meta: { "nullable":false, "filter-field":true, "key-field":false, "nochangeupdate-field":true, "combine-field":false, "history-field":true,"nohistorymerge-field":false , "datecheck-field":true, "validation-regex":"\\d{8}" }
+v| LastDate | date | YYYYMMDD | a comment |
+#@value-meta: { "nullable":false, "filter-field":false, "key-field":false, "nochangeupdate-field":false, "combine-field":true, "history-field":true, "nohistorymerge-field":false , "datecheck-field":false, "validation-regex":"" }
+v| OrganizationCode | string | | a comment |
+#@value-meta: { "nullable":false, "filter-field":false, "key-field":false, "nochangeupdate-field":false, "combine-field":true, "history-field":true, "nohistorymerge-field":false , "datecheck-field":false, "validation-regex":"" }
+v| OrganizationName | string | | a comment |
+#@value-meta: { "nullable":false, "filter-field":false, "key-field":false, "nochangeupdate-field":false, "combine-field":true, "history-field":true, "nohistorymerge-field":false , "datecheck-field":false, "validation-regex":"" }
+v| OrganizationAddress1 | string | | Organization address 1 |
+#@value-meta: { "nullable":true, "filter-field":false, "key-field":false, "nochangeupdate-field":false, "combine-field":true, "history-field":true, "nohistorymerge-field":false , "datecheck-field":false, "validation-regex":"" }
+v| OrganizationAddress2 | string | | Organization address 2 |
+#@value-meta: { "nullable":false, "filter-field":false, "key-field":false, "nochangeupdate-field":false, "combine-field":true, "history-field":true, "nohistorymerge-field":false , "datecheck-field":false, "validation-regex":"" }
+v| OrganizationCity | string | | Organization city |
+#@value-meta: { "nullable":false, "filter-field":false, "key-field":false, "nochangeupdate-field":false, "combine-field":true, "history-field":true, "nohistorymerge-field":false , "datecheck-field":false, "validation-regex":"" }
+v| OrganizationProvince | string | | Organization province |
+#@value-meta: { "nullable":false, "filter-field":false, "key-field":false, "nochangeupdate-field":false, "combine-field":true, "history-field":true, "nohistorymerge-field":false , "datecheck-field":false, "validation-regex":"" }
+v| OrganizationPostalCode | string | | Organization postal code |
+#@value-meta: { "nullable":false, "filter-field":false, "key-field":false, "nochangeupdate-field":false, "combine-field":true, "history-field":true, "nohistorymerge-field":false , "datecheck-field":false, "validation-regex":"" }
+v| OrganizationISOCountryCode | string | | Organization ISO country code |
+#@value-meta: { "nullable":true, "filter-field":false, "key-field":false, "nochangeupdate-field":false, "combine-field":true, "history-field":true, "nohistorymerge-field":false , "datecheck-field":false, "validation-regex":"" }
+v| OrganizationPhoneNumber | string | | Organization phone number |
+I| Block1H | Block1H | Block1H |
+
+######################################################################
+## Block1 history
+######################################################################
+#@block-meta: { "code-generate":false }
+b| Block1H | Organization General Information History |
+v| FirstDate | date | YYYYMMDD | a comment | a comment | 
+v| LastDate | date | YYYYMMDD | a comment |
+v| OrganizationCode | string | | a comment |
+v| OrganizationName | string | | Organization name |
+v| OrganizationAddress1 | string | | Organization address 1 |
+v| OrganizationAddress2 | string | | Organization address 2 |
+v| OrganizationCity | string | | Organization city |
+v| OrganizationProvince | string | | Organization province |
+v| OrganizationPostalCode | string | | Organization postal code |
+v| OrganizationISOCountryCode | string | | Organization ISO country code |
+v| OrganizationPhoneNumber | string | | Organization phone number |
+
+######################################################################
+## Subject Data Elements - change rate: infrequent
+######################################################################
+#@block-meta: { "code-generate":true, "combine-generator":"child-combine"  "history-block":" Block2H" }
+b| Block2 | Subject Demographic Information |
+#@value-meta: { "nullable":false, "filter-field":true, "key-field":false, "nochangeupdate-field":false, "combine-field":false, "history-field":true, "nohistorymerge-field":false , "datecheck-field":false, "validation-regex":"\\d{8}" }
+v| FirstDate | date | YYYYMMDD | a comment | a comment | 
+#@value-meta: { "nullable":false, "filter-field":true, "key-field":false, "nochangeupdate-field":true, "combine-field":false, "history-field":true, "nohistorymerge-field":false , "datecheck-field":true, "validation-regex":"\\d{8}" }
+v| LastDate | date | YYYYMMDD | a comment |
+#@value-meta: { "nullable":false, "filter-field":false, "key-field":false, "nochangeupdate-field":false, "combine-field":true, "history-field":true, "nohistorymerge-field":false , "datecheck-field":false, "validation-regex":"" }
+v| SubjectID | number | | a comment |
+#@value-meta: { "nullable":false, "filter-field":false, "key-field":false, "nochangeupdate-field":false, "combine-field":true, "history-field":true, "nohistorymerge-field":false , "datecheck-field":false, "validation-regex":"" }
+v| SubjectFirstName | string | | Subject First Name |
+#@value-meta: { "nullable":true, "filter-field":false, "key-field":false, "nochangeupdate-field":false, "combine-field":true, "history-field":true, "nohistorymerge-field":false , "datecheck-field":false, "validation-regex":"" }
+v| SubjectMiddleName | string | | Subject Middle Name |
+#@value-meta: { "nullable":false, "filter-field":false, "key-field":false, "nochangeupdate-field":false, "combine-field":true, "history-field":true, "nohistorymerge-field":false , "datecheck-field":false, "validation-regex":"" }
+v| SubjectLastName | string | | Subject Last Name |
+#@value-meta: { "nullable":false, "filter-field":false, "key-field":false, "nochangeupdate-field":false, "combine-field":true, "history-field":true, "nohistorymerge-field":false , "datecheck-field":false, "validation-regex":"" }
+v| SubjectDateOfBirth | date | YYYYMMDD | Subject Date Of Birth |
+#@value-meta: { "nullable":false, "filter-field":false, "key-field":false, "nochangeupdate-field":false, "combine-field":false, "history-field":true, "nohistorymerge-field":false , "datecheck-field":false, "validation-regex":"" }
+v| SubjectAddress1 | string | | Subject Address 1 (home) |
+#@value-meta: { "nullable":true, "filter-field":false, "key-field":false, "nochangeupdate-field":false, "combine-field":true, "history-field":true, "nohistorymerge-field":false , "datecheck-field":false, "validation-regex":"" }
+v| SubjectAddress2 | string | | Subject Address 2 (home) |
+#@value-meta: { "nullable":false, "filter-field":false, "key-field":false, "nochangeupdate-field":false, "combine-field":true, "history-field":true, "nohistorymerge-field":false , "datecheck-field":false, "validation-regex":"" }
+v| SubjectCity | string | | Subject City (home) |
+#@value-meta: { "nullable":false, "filter-field":false, "key-field":false, "nochangeupdate-field":false, "combine-field":true, "history-field":true, "nohistorymerge-field":false , "datecheck-field":false, "validation-regex":"" }
+v| SubjectProvince | string | | Subject Province (home) |
+#@value-meta: { "nullable":false, "filter-field":false, "key-field":false, "nochangeupdate-field":false, "combine-field":false, "history-field":true, "nohistorymerge-field":false , "datecheck-field":false, "validation-regex":"" }
+v| SubjectPostalCode | string | | Subject Postal Code (home) |
+#@value-meta: { "nullable":false, "filter-field":false, "key-field":false, "nochangeupdate-field":false, "combine-field":true, "history-field":true, "nohistorymerge-field":false , "datecheck-field":false, "validation-regex":"" }
+v| SubjectISOCountryCode | string | | Subject ISO Country Code (home) |
+#@value-meta: { "nullable":true, "filter-field":false, "key-field":false, "nochangeupdate-field":false, "combine-field":true, "history-field":true, "nohistorymerge-field":false , "datecheck-field":false, "validation-regex":"" }
+v| SubjectPersonalEmailAddress | string | | Subject email address (personal) |
+#@value-meta: { "nullable":true, "filter-field":false, "key-field":false, "nochangeupdate-field":false, "combine-field":true, "history-field":true, "nohistorymerge-field":false , "datecheck-field":false, "validation-regex":"" }
+v| SubjectHomePhoneNumber | string | | Subject home phone number (home) |
+#@value-meta: { "nullable":false, "filter-field":false, "key-field":false, "nochangeupdate-field":false, "combine-field":true, "history-field":true, "nohistorymerge-field":false , "datecheck-field":false, "validation-regex":"" }
+v| SubjectMobilePhoneNumber | string | | Subject mobile phone number (personal) |
+I| Block2H | Block2H | Block2H | 
+
+######################################################################
+## Block2 History
+######################################################################
+#@block-meta: { "code-generate":false }
+b| Block2H | Subject Demographic Information History |
+v| FirstDate | date | YYYYMMDD | a comment | a comment | 
+v| LastDate | date | YYYYMMDD | a comment |
+v| SubjectID | number | | a comment |
+v| SubjectFirstName | string | | Subject First Name |
+v| SubjectMiddleName | string | | Subject Middle Name |
+v| SubjectLastName | string | | Subject Last Name |
+v| SubjectDateOfBirth | date | YYYYMMDD | Subject Date Of Birth |
+v| SubjectAddress1 | string | | Subject Address 1 (home) |
+v| SubjectAddress2 | string | | Subject Address 2 (home) |
+v| SubjectCity | string | | Subject City (home) |
+v| SubjectProvince | string | | Subject Province (home) |
+v| SubjectPostalCode | string | | Subject Postal Code (home) |
+v| SubjectISOCountryCode | string | | Subject ISO Country Code (home) |
+v| SubjectPersonalEmailAddress | string | | Subject email address (personal) |
+v| SubjectHomePhoneNumber | string | | Subject home phone number (home) |
+v| SubjectMobilePhoneNumber | string | | Subject mobile phone number (personal) |
+
+## end

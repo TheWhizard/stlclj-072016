@@ -1,0 +1,650 @@
+[:CDA
+ [:record
+  [:comments
+   [:comment
+    [:comment-text
+     "#####################################################################"]]
+   [:comment
+    [:comment-text
+     "# the comment construct was overloaded to be able include metadata, JSON, before any element to guide code generation"]]
+   [:comment
+    [:comment-text
+     "# check the EBNF and look at the production rules on how the distinguish comments from metadata annotations"]]
+   [:comment
+    [:comment-text
+     "#####################################################################"]]
+   [:comment
+    [:comment-text
+     "#####################################################################"]]
+   [:comment [:comment-text "# root/record definition"]]
+   [:comment
+    [:comment-text
+     "#####################################################################"]]]
+  [:record-meta [:meta-data "{ \"language\":\"cpp\" }"]]
+  [:name "Block0"]
+  [:root-block "Block0"]
+  [:remarks [:remark ""]]]
+ [:blocks
+  [:block
+   [:comments
+    [:comment
+     [:comment-text
+      "#####################################################################"]]
+    [:comment [:comment-text "# Commmon Header Block"]]
+    [:comment
+     [:comment-text
+      "#####################################################################"]]]
+   [:block-meta
+    [:meta-data
+     "{ \"code-generate\":true, \"combine-generator\":\"root-combine\", \"is-root\":true }"]]
+   [:name "Block0"]
+   [:remarks [:remark "Common Header Block "] [:remark ""]]
+   [:values
+    [:value
+     [:comments]
+     [:value-meta
+      [:meta-data
+       "{ \"nullable\":false, \"filter-field\":true, \"key-field\":false, \"combine-field\":false, \"history-field\":false, \"validation-regex\":\"\\\\d{8}\" }"]]
+     [:name "FirstDate"]
+     [:type [:date-type "date"]]
+     [:sub-type [:date-format "YYYYMMDD"]]
+     [:remarks
+      [:remark "a comment "]
+      [:remark "a comment "]
+      [:remark ""]]]
+    [:value
+     [:comments]
+     [:value-meta
+      [:meta-data
+       "{ \"nullable\":false, \"filter-field\":true, \"key-field\":false, \"combine-field\":true, \"history-field\":false, \"validation-regex\":\"\\\\d{8}\" }"]]
+     [:name "LastDate"]
+     [:type [:date-type "date"]]
+     [:sub-type [:date-format "YYYYMMDD"]]
+     [:remarks [:remark "a comment "] [:remark ""]]]
+    [:value
+     [:comments]
+     [:value-meta
+      [:meta-data
+       "{ \"nullable\":false, \"filter-field\":true, \"key-field\":true, \"combine-field\":false, \"history-field\":false, \"validation-regex\":\"\" }"]]
+     [:name "Source"]
+     [:type [:string-type "string"]]
+     [:sub-type [:no-sub-type [:ws ""]]]
+     [:remarks [:remark "a comment "] [:remark ""]]]
+    [:value
+     [:comments]
+     [:value-meta
+      [:meta-data
+       "{ \"nullable\":false, \"filter-field\":true, \"key-field\":true, \"combine-field\":false, \"history-field\":false, \"validation-regex\":\"\" }"]]
+     [:name "Key"]
+     [:type [:string-type "string"]]
+     [:sub-type [:no-sub-type [:ws ""]]]
+     [:remarks [:remark "a comment "] [:remark ""]]]
+    [:value
+     [:comments]
+     [:value-meta
+      [:meta-data
+       "{ \"nullable\":true, \"filter-field\":false, \"key-field\":false, \"combine-field\":true, \"history-field\":false, \"validation-regex\":\"\" }"]]
+     [:name "VersionNumber"]
+     [:type [:number-type "number"]]
+     [:sub-type [:no-sub-type [:ws ""]]]
+     [:remarks [:remark "a comment "] [:remark ""]]]]
+   [:iterators
+    [:iterator
+     [:comments
+      [:comment [:comment-text "# general information (priority 1)"]]]
+     [:iterator-meta [:meta-data "{  \"check-exists\":true }"]]
+     [:name "Block1"]
+     [:block-name "Block1"]
+     [:remarks [:remark "Block1 "] [:remark ""]]]
+    [:iterator
+     [:comments
+      [:comment
+       [:comment-text "# demographics information (priority 1)"]]]
+     [:iterator-meta [:meta-data "{  \"check-exists\":true }"]]
+     [:name "Block2"]
+     [:block-name "Block2"]
+     [:remarks [:remark "Block2 "] [:remark ""]]]]]
+  [:block
+   [:comments
+    [:comment
+     [:comment-text
+      "#####################################################################"]]
+    [:comment
+     [:comment-text "# General Information - change rate: infrequent"]]
+    [:comment
+     [:comment-text
+      "#####################################################################"]]]
+   [:block-meta
+    [:meta-data
+     "{ \"code-generate\":true, \"combine-generator\":\"child-combine\"  \"history-block\":\"Block1H\" }"]]
+   [:name "Block1"]
+   [:remarks [:remark "General Information "] [:remark ""]]
+   [:values
+    [:value
+     [:comments]
+     [:value-meta
+      [:meta-data
+       "{ \"nullable\":false, \"filter-field\":true, \"key-field\":false, \"nochangeupdate-field\":false, \"combine-field\":false, \"history-field\":true, \"nohistorymerge-field\":false , \"datecheck-field\":false,  \"validation-regex\":\"\\\\d{8}\" }"]]
+     [:name "FirstDate"]
+     [:type [:date-type "date"]]
+     [:sub-type [:date-format "YYYYMMDD"]]
+     [:remarks
+      [:remark "a comment "]
+      [:remark "a comment "]
+      [:remark ""]]]
+    [:value
+     [:comments]
+     [:value-meta
+      [:meta-data
+       "{ \"nullable\":false, \"filter-field\":true, \"key-field\":false, \"nochangeupdate-field\":true, \"combine-field\":false, \"history-field\":true,\"nohistorymerge-field\":false , \"datecheck-field\":true, \"validation-regex\":\"\\\\d{8}\" }"]]
+     [:name "LastDate"]
+     [:type [:date-type "date"]]
+     [:sub-type [:date-format "YYYYMMDD"]]
+     [:remarks [:remark "a comment "] [:remark ""]]]
+    [:value
+     [:comments]
+     [:value-meta
+      [:meta-data
+       "{ \"nullable\":false, \"filter-field\":false, \"key-field\":false, \"nochangeupdate-field\":false, \"combine-field\":true, \"history-field\":true, \"nohistorymerge-field\":false , \"datecheck-field\":false, \"validation-regex\":\"\" }"]]
+     [:name "OrganizationCode"]
+     [:type [:string-type "string"]]
+     [:sub-type [:no-sub-type [:ws ""]]]
+     [:remarks [:remark "a comment "] [:remark ""]]]
+    [:value
+     [:comments]
+     [:value-meta
+      [:meta-data
+       "{ \"nullable\":false, \"filter-field\":false, \"key-field\":false, \"nochangeupdate-field\":false, \"combine-field\":true, \"history-field\":true, \"nohistorymerge-field\":false , \"datecheck-field\":false, \"validation-regex\":\"\" }"]]
+     [:name "OrganizationName"]
+     [:type [:string-type "string"]]
+     [:sub-type [:no-sub-type [:ws ""]]]
+     [:remarks [:remark "a comment "] [:remark ""]]]
+    [:value
+     [:comments]
+     [:value-meta
+      [:meta-data
+       "{ \"nullable\":false, \"filter-field\":false, \"key-field\":false, \"nochangeupdate-field\":false, \"combine-field\":true, \"history-field\":true, \"nohistorymerge-field\":false , \"datecheck-field\":false, \"validation-regex\":\"\" }"]]
+     [:name "OrganizationAddress1"]
+     [:type [:string-type "string"]]
+     [:sub-type [:no-sub-type [:ws ""]]]
+     [:remarks [:remark "Organization address 1 "] [:remark ""]]]
+    [:value
+     [:comments]
+     [:value-meta
+      [:meta-data
+       "{ \"nullable\":true, \"filter-field\":false, \"key-field\":false, \"nochangeupdate-field\":false, \"combine-field\":true, \"history-field\":true, \"nohistorymerge-field\":false , \"datecheck-field\":false, \"validation-regex\":\"\" }"]]
+     [:name "OrganizationAddress2"]
+     [:type [:string-type "string"]]
+     [:sub-type [:no-sub-type [:ws ""]]]
+     [:remarks [:remark "Organization address 2 "] [:remark ""]]]
+    [:value
+     [:comments]
+     [:value-meta
+      [:meta-data
+       "{ \"nullable\":false, \"filter-field\":false, \"key-field\":false, \"nochangeupdate-field\":false, \"combine-field\":true, \"history-field\":true, \"nohistorymerge-field\":false , \"datecheck-field\":false, \"validation-regex\":\"\" }"]]
+     [:name "OrganizationCity"]
+     [:type [:string-type "string"]]
+     [:sub-type [:no-sub-type [:ws ""]]]
+     [:remarks [:remark "Organization city "] [:remark ""]]]
+    [:value
+     [:comments]
+     [:value-meta
+      [:meta-data
+       "{ \"nullable\":false, \"filter-field\":false, \"key-field\":false, \"nochangeupdate-field\":false, \"combine-field\":true, \"history-field\":true, \"nohistorymerge-field\":false , \"datecheck-field\":false, \"validation-regex\":\"\" }"]]
+     [:name "OrganizationProvince"]
+     [:type [:string-type "string"]]
+     [:sub-type [:no-sub-type [:ws ""]]]
+     [:remarks [:remark "Organization province "] [:remark ""]]]
+    [:value
+     [:comments]
+     [:value-meta
+      [:meta-data
+       "{ \"nullable\":false, \"filter-field\":false, \"key-field\":false, \"nochangeupdate-field\":false, \"combine-field\":true, \"history-field\":true, \"nohistorymerge-field\":false , \"datecheck-field\":false, \"validation-regex\":\"\" }"]]
+     [:name "OrganizationPostalCode"]
+     [:type [:string-type "string"]]
+     [:sub-type [:no-sub-type [:ws ""]]]
+     [:remarks [:remark "Organization postal code "] [:remark ""]]]
+    [:value
+     [:comments]
+     [:value-meta
+      [:meta-data
+       "{ \"nullable\":false, \"filter-field\":false, \"key-field\":false, \"nochangeupdate-field\":false, \"combine-field\":true, \"history-field\":true, \"nohistorymerge-field\":false , \"datecheck-field\":false, \"validation-regex\":\"\" }"]]
+     [:name "OrganizationISOCountryCode"]
+     [:type [:string-type "string"]]
+     [:sub-type [:no-sub-type [:ws ""]]]
+     [:remarks
+      [:remark "Organization ISO country code "]
+      [:remark ""]]]
+    [:value
+     [:comments]
+     [:value-meta
+      [:meta-data
+       "{ \"nullable\":true, \"filter-field\":false, \"key-field\":false, \"nochangeupdate-field\":false, \"combine-field\":true, \"history-field\":true, \"nohistorymerge-field\":false , \"datecheck-field\":false, \"validation-regex\":\"\" }"]]
+     [:name "OrganizationPhoneNumber"]
+     [:type [:string-type "string"]]
+     [:sub-type [:no-sub-type [:ws ""]]]
+     [:remarks [:remark "Organization phone number "] [:remark ""]]]]
+   [:iterators
+    [:iterator
+     [:comments]
+     [:iterator-meta]
+     [:name "Block1H"]
+     [:block-name "Block1H"]
+     [:remarks [:remark "Block1H "] [:remark ""]]]]]
+  [:block
+   [:comments
+    [:comment
+     [:comment-text
+      "#####################################################################"]]
+    [:comment [:comment-text "# Block1 history"]]
+    [:comment
+     [:comment-text
+      "#####################################################################"]]]
+   [:block-meta [:meta-data "{ \"code-generate\":false }"]]
+   [:name "Block1H"]
+   [:remarks
+    [:remark "Organization General Information History "]
+    [:remark ""]]
+   [:values
+    [:value
+     [:comments]
+     [:value-meta]
+     [:name "FirstDate"]
+     [:type [:date-type "date"]]
+     [:sub-type [:date-format "YYYYMMDD"]]
+     [:remarks
+      [:remark "a comment "]
+      [:remark "a comment "]
+      [:remark ""]]]
+    [:value
+     [:comments]
+     [:value-meta]
+     [:name "LastDate"]
+     [:type [:date-type "date"]]
+     [:sub-type [:date-format "YYYYMMDD"]]
+     [:remarks [:remark "a comment "] [:remark ""]]]
+    [:value
+     [:comments]
+     [:value-meta]
+     [:name "OrganizationCode"]
+     [:type [:string-type "string"]]
+     [:sub-type [:no-sub-type [:ws ""]]]
+     [:remarks [:remark "a comment "] [:remark ""]]]
+    [:value
+     [:comments]
+     [:value-meta]
+     [:name "OrganizationName"]
+     [:type [:string-type "string"]]
+     [:sub-type [:no-sub-type [:ws ""]]]
+     [:remarks [:remark "Organization name "] [:remark ""]]]
+    [:value
+     [:comments]
+     [:value-meta]
+     [:name "OrganizationAddress1"]
+     [:type [:string-type "string"]]
+     [:sub-type [:no-sub-type [:ws ""]]]
+     [:remarks [:remark "Organization address 1 "] [:remark ""]]]
+    [:value
+     [:comments]
+     [:value-meta]
+     [:name "OrganizationAddress2"]
+     [:type [:string-type "string"]]
+     [:sub-type [:no-sub-type [:ws ""]]]
+     [:remarks [:remark "Organization address 2 "] [:remark ""]]]
+    [:value
+     [:comments]
+     [:value-meta]
+     [:name "OrganizationCity"]
+     [:type [:string-type "string"]]
+     [:sub-type [:no-sub-type [:ws ""]]]
+     [:remarks [:remark "Organization city "] [:remark ""]]]
+    [:value
+     [:comments]
+     [:value-meta]
+     [:name "OrganizationProvince"]
+     [:type [:string-type "string"]]
+     [:sub-type [:no-sub-type [:ws ""]]]
+     [:remarks [:remark "Organization province "] [:remark ""]]]
+    [:value
+     [:comments]
+     [:value-meta]
+     [:name "OrganizationPostalCode"]
+     [:type [:string-type "string"]]
+     [:sub-type [:no-sub-type [:ws ""]]]
+     [:remarks [:remark "Organization postal code "] [:remark ""]]]
+    [:value
+     [:comments]
+     [:value-meta]
+     [:name "OrganizationISOCountryCode"]
+     [:type [:string-type "string"]]
+     [:sub-type [:no-sub-type [:ws ""]]]
+     [:remarks
+      [:remark "Organization ISO country code "]
+      [:remark ""]]]
+    [:value
+     [:comments]
+     [:value-meta]
+     [:name "OrganizationPhoneNumber"]
+     [:type [:string-type "string"]]
+     [:sub-type [:no-sub-type [:ws ""]]]
+     [:remarks [:remark "Organization phone number "] [:remark ""]]]]
+   [:iterators]]
+  [:block
+   [:comments
+    [:comment
+     [:comment-text
+      "#####################################################################"]]
+    [:comment
+     [:comment-text
+      "# Subject Data Elements - change rate: infrequent"]]
+    [:comment
+     [:comment-text
+      "#####################################################################"]]]
+   [:block-meta
+    [:meta-data
+     "{ \"code-generate\":true, \"combine-generator\":\"child-combine\"  \"history-block\":\" Block2H\" }"]]
+   [:name "Block2"]
+   [:remarks [:remark "Subject Demographic Information "] [:remark ""]]
+   [:values
+    [:value
+     [:comments]
+     [:value-meta
+      [:meta-data
+       "{ \"nullable\":false, \"filter-field\":true, \"key-field\":false, \"nochangeupdate-field\":false, \"combine-field\":false, \"history-field\":true, \"nohistorymerge-field\":false , \"datecheck-field\":false, \"validation-regex\":\"\\\\d{8}\" }"]]
+     [:name "FirstDate"]
+     [:type [:date-type "date"]]
+     [:sub-type [:date-format "YYYYMMDD"]]
+     [:remarks
+      [:remark "a comment "]
+      [:remark "a comment "]
+      [:remark ""]]]
+    [:value
+     [:comments]
+     [:value-meta
+      [:meta-data
+       "{ \"nullable\":false, \"filter-field\":true, \"key-field\":false, \"nochangeupdate-field\":true, \"combine-field\":false, \"history-field\":true, \"nohistorymerge-field\":false , \"datecheck-field\":true, \"validation-regex\":\"\\\\d{8}\" }"]]
+     [:name "LastDate"]
+     [:type [:date-type "date"]]
+     [:sub-type [:date-format "YYYYMMDD"]]
+     [:remarks [:remark "a comment "] [:remark ""]]]
+    [:value
+     [:comments]
+     [:value-meta
+      [:meta-data
+       "{ \"nullable\":false, \"filter-field\":false, \"key-field\":false, \"nochangeupdate-field\":false, \"combine-field\":true, \"history-field\":true, \"nohistorymerge-field\":false , \"datecheck-field\":false, \"validation-regex\":\"\" }"]]
+     [:name "SubjectID"]
+     [:type [:number-type "number"]]
+     [:sub-type [:no-sub-type [:ws ""]]]
+     [:remarks [:remark "a comment "] [:remark ""]]]
+    [:value
+     [:comments]
+     [:value-meta
+      [:meta-data
+       "{ \"nullable\":false, \"filter-field\":false, \"key-field\":false, \"nochangeupdate-field\":false, \"combine-field\":true, \"history-field\":true, \"nohistorymerge-field\":false , \"datecheck-field\":false, \"validation-regex\":\"\" }"]]
+     [:name "SubjectFirstName"]
+     [:type [:string-type "string"]]
+     [:sub-type [:no-sub-type [:ws ""]]]
+     [:remarks [:remark "Subject First Name "] [:remark ""]]]
+    [:value
+     [:comments]
+     [:value-meta
+      [:meta-data
+       "{ \"nullable\":true, \"filter-field\":false, \"key-field\":false, \"nochangeupdate-field\":false, \"combine-field\":true, \"history-field\":true, \"nohistorymerge-field\":false , \"datecheck-field\":false, \"validation-regex\":\"\" }"]]
+     [:name "SubjectMiddleName"]
+     [:type [:string-type "string"]]
+     [:sub-type [:no-sub-type [:ws ""]]]
+     [:remarks [:remark "Subject Middle Name "] [:remark ""]]]
+    [:value
+     [:comments]
+     [:value-meta
+      [:meta-data
+       "{ \"nullable\":false, \"filter-field\":false, \"key-field\":false, \"nochangeupdate-field\":false, \"combine-field\":true, \"history-field\":true, \"nohistorymerge-field\":false , \"datecheck-field\":false, \"validation-regex\":\"\" }"]]
+     [:name "SubjectLastName"]
+     [:type [:string-type "string"]]
+     [:sub-type [:no-sub-type [:ws ""]]]
+     [:remarks [:remark "Subject Last Name "] [:remark ""]]]
+    [:value
+     [:comments]
+     [:value-meta
+      [:meta-data
+       "{ \"nullable\":false, \"filter-field\":false, \"key-field\":false, \"nochangeupdate-field\":false, \"combine-field\":true, \"history-field\":true, \"nohistorymerge-field\":false , \"datecheck-field\":false, \"validation-regex\":\"\" }"]]
+     [:name "SubjectDateOfBirth"]
+     [:type [:date-type "date"]]
+     [:sub-type [:date-format "YYYYMMDD"]]
+     [:remarks [:remark "Subject Date Of Birth "] [:remark ""]]]
+    [:value
+     [:comments]
+     [:value-meta
+      [:meta-data
+       "{ \"nullable\":false, \"filter-field\":false, \"key-field\":false, \"nochangeupdate-field\":false, \"combine-field\":false, \"history-field\":true, \"nohistorymerge-field\":false , \"datecheck-field\":false, \"validation-regex\":\"\" }"]]
+     [:name "SubjectAddress1"]
+     [:type [:string-type "string"]]
+     [:sub-type [:no-sub-type [:ws ""]]]
+     [:remarks [:remark "Subject Address 1 (home) "] [:remark ""]]]
+    [:value
+     [:comments]
+     [:value-meta
+      [:meta-data
+       "{ \"nullable\":true, \"filter-field\":false, \"key-field\":false, \"nochangeupdate-field\":false, \"combine-field\":true, \"history-field\":true, \"nohistorymerge-field\":false , \"datecheck-field\":false, \"validation-regex\":\"\" }"]]
+     [:name "SubjectAddress2"]
+     [:type [:string-type "string"]]
+     [:sub-type [:no-sub-type [:ws ""]]]
+     [:remarks [:remark "Subject Address 2 (home) "] [:remark ""]]]
+    [:value
+     [:comments]
+     [:value-meta
+      [:meta-data
+       "{ \"nullable\":false, \"filter-field\":false, \"key-field\":false, \"nochangeupdate-field\":false, \"combine-field\":true, \"history-field\":true, \"nohistorymerge-field\":false , \"datecheck-field\":false, \"validation-regex\":\"\" }"]]
+     [:name "SubjectCity"]
+     [:type [:string-type "string"]]
+     [:sub-type [:no-sub-type [:ws ""]]]
+     [:remarks [:remark "Subject City (home) "] [:remark ""]]]
+    [:value
+     [:comments]
+     [:value-meta
+      [:meta-data
+       "{ \"nullable\":false, \"filter-field\":false, \"key-field\":false, \"nochangeupdate-field\":false, \"combine-field\":true, \"history-field\":true, \"nohistorymerge-field\":false , \"datecheck-field\":false, \"validation-regex\":\"\" }"]]
+     [:name "SubjectProvince"]
+     [:type [:string-type "string"]]
+     [:sub-type [:no-sub-type [:ws ""]]]
+     [:remarks [:remark "Subject Province (home) "] [:remark ""]]]
+    [:value
+     [:comments]
+     [:value-meta
+      [:meta-data
+       "{ \"nullable\":false, \"filter-field\":false, \"key-field\":false, \"nochangeupdate-field\":false, \"combine-field\":false, \"history-field\":true, \"nohistorymerge-field\":false , \"datecheck-field\":false, \"validation-regex\":\"\" }"]]
+     [:name "SubjectPostalCode"]
+     [:type [:string-type "string"]]
+     [:sub-type [:no-sub-type [:ws ""]]]
+     [:remarks [:remark "Subject Postal Code (home) "] [:remark ""]]]
+    [:value
+     [:comments]
+     [:value-meta
+      [:meta-data
+       "{ \"nullable\":false, \"filter-field\":false, \"key-field\":false, \"nochangeupdate-field\":false, \"combine-field\":true, \"history-field\":true, \"nohistorymerge-field\":false , \"datecheck-field\":false, \"validation-regex\":\"\" }"]]
+     [:name "SubjectISOCountryCode"]
+     [:type [:string-type "string"]]
+     [:sub-type [:no-sub-type [:ws ""]]]
+     [:remarks
+      [:remark "Subject ISO Country Code (home) "]
+      [:remark ""]]]
+    [:value
+     [:comments]
+     [:value-meta
+      [:meta-data
+       "{ \"nullable\":true, \"filter-field\":false, \"key-field\":false, \"nochangeupdate-field\":false, \"combine-field\":true, \"history-field\":true, \"nohistorymerge-field\":false , \"datecheck-field\":false, \"validation-regex\":\"\" }"]]
+     [:name "SubjectPersonalEmailAddress"]
+     [:type [:string-type "string"]]
+     [:sub-type [:no-sub-type [:ws ""]]]
+     [:remarks
+      [:remark "Subject email address (personal) "]
+      [:remark ""]]]
+    [:value
+     [:comments]
+     [:value-meta
+      [:meta-data
+       "{ \"nullable\":true, \"filter-field\":false, \"key-field\":false, \"nochangeupdate-field\":false, \"combine-field\":true, \"history-field\":true, \"nohistorymerge-field\":false , \"datecheck-field\":false, \"validation-regex\":\"\" }"]]
+     [:name "SubjectHomePhoneNumber"]
+     [:type [:string-type "string"]]
+     [:sub-type [:no-sub-type [:ws ""]]]
+     [:remarks
+      [:remark "Subject home phone number (home) "]
+      [:remark ""]]]
+    [:value
+     [:comments]
+     [:value-meta
+      [:meta-data
+       "{ \"nullable\":false, \"filter-field\":false, \"key-field\":false, \"nochangeupdate-field\":false, \"combine-field\":true, \"history-field\":true, \"nohistorymerge-field\":false , \"datecheck-field\":false, \"validation-regex\":\"\" }"]]
+     [:name "SubjectMobilePhoneNumber"]
+     [:type [:string-type "string"]]
+     [:sub-type [:no-sub-type [:ws ""]]]
+     [:remarks
+      [:remark "Subject mobile phone number (personal) "]
+      [:remark ""]]]]
+   [:iterators
+    [:iterator
+     [:comments]
+     [:iterator-meta]
+     [:name "Block2H"]
+     [:block-name "Block2H"]
+     [:remarks [:remark "Block2H "] [:remark ""]]]]]
+  [:block
+   [:comments
+    [:comment
+     [:comment-text
+      "#####################################################################"]]
+    [:comment [:comment-text "# Block2 History"]]
+    [:comment
+     [:comment-text
+      "#####################################################################"]]]
+   [:block-meta [:meta-data "{ \"code-generate\":false }"]]
+   [:name "Block2H"]
+   [:remarks
+    [:remark "Subject Demographic Information History "]
+    [:remark ""]]
+   [:values
+    [:value
+     [:comments]
+     [:value-meta]
+     [:name "FirstDate"]
+     [:type [:date-type "date"]]
+     [:sub-type [:date-format "YYYYMMDD"]]
+     [:remarks
+      [:remark "a comment "]
+      [:remark "a comment "]
+      [:remark ""]]]
+    [:value
+     [:comments]
+     [:value-meta]
+     [:name "LastDate"]
+     [:type [:date-type "date"]]
+     [:sub-type [:date-format "YYYYMMDD"]]
+     [:remarks [:remark "a comment "] [:remark ""]]]
+    [:value
+     [:comments]
+     [:value-meta]
+     [:name "SubjectID"]
+     [:type [:number-type "number"]]
+     [:sub-type [:no-sub-type [:ws ""]]]
+     [:remarks [:remark "a comment "] [:remark ""]]]
+    [:value
+     [:comments]
+     [:value-meta]
+     [:name "SubjectFirstName"]
+     [:type [:string-type "string"]]
+     [:sub-type [:no-sub-type [:ws ""]]]
+     [:remarks [:remark "Subject First Name "] [:remark ""]]]
+    [:value
+     [:comments]
+     [:value-meta]
+     [:name "SubjectMiddleName"]
+     [:type [:string-type "string"]]
+     [:sub-type [:no-sub-type [:ws ""]]]
+     [:remarks [:remark "Subject Middle Name "] [:remark ""]]]
+    [:value
+     [:comments]
+     [:value-meta]
+     [:name "SubjectLastName"]
+     [:type [:string-type "string"]]
+     [:sub-type [:no-sub-type [:ws ""]]]
+     [:remarks [:remark "Subject Last Name "] [:remark ""]]]
+    [:value
+     [:comments]
+     [:value-meta]
+     [:name "SubjectDateOfBirth"]
+     [:type [:date-type "date"]]
+     [:sub-type [:date-format "YYYYMMDD"]]
+     [:remarks [:remark "Subject Date Of Birth "] [:remark ""]]]
+    [:value
+     [:comments]
+     [:value-meta]
+     [:name "SubjectAddress1"]
+     [:type [:string-type "string"]]
+     [:sub-type [:no-sub-type [:ws ""]]]
+     [:remarks [:remark "Subject Address 1 (home) "] [:remark ""]]]
+    [:value
+     [:comments]
+     [:value-meta]
+     [:name "SubjectAddress2"]
+     [:type [:string-type "string"]]
+     [:sub-type [:no-sub-type [:ws ""]]]
+     [:remarks [:remark "Subject Address 2 (home) "] [:remark ""]]]
+    [:value
+     [:comments]
+     [:value-meta]
+     [:name "SubjectCity"]
+     [:type [:string-type "string"]]
+     [:sub-type [:no-sub-type [:ws ""]]]
+     [:remarks [:remark "Subject City (home) "] [:remark ""]]]
+    [:value
+     [:comments]
+     [:value-meta]
+     [:name "SubjectProvince"]
+     [:type [:string-type "string"]]
+     [:sub-type [:no-sub-type [:ws ""]]]
+     [:remarks [:remark "Subject Province (home) "] [:remark ""]]]
+    [:value
+     [:comments]
+     [:value-meta]
+     [:name "SubjectPostalCode"]
+     [:type [:string-type "string"]]
+     [:sub-type [:no-sub-type [:ws ""]]]
+     [:remarks [:remark "Subject Postal Code (home) "] [:remark ""]]]
+    [:value
+     [:comments]
+     [:value-meta]
+     [:name "SubjectISOCountryCode"]
+     [:type [:string-type "string"]]
+     [:sub-type [:no-sub-type [:ws ""]]]
+     [:remarks
+      [:remark "Subject ISO Country Code (home) "]
+      [:remark ""]]]
+    [:value
+     [:comments]
+     [:value-meta]
+     [:name "SubjectPersonalEmailAddress"]
+     [:type [:string-type "string"]]
+     [:sub-type [:no-sub-type [:ws ""]]]
+     [:remarks
+      [:remark "Subject email address (personal) "]
+      [:remark ""]]]
+    [:value
+     [:comments]
+     [:value-meta]
+     [:name "SubjectHomePhoneNumber"]
+     [:type [:string-type "string"]]
+     [:sub-type [:no-sub-type [:ws ""]]]
+     [:remarks
+      [:remark "Subject home phone number (home) "]
+      [:remark ""]]]
+    [:value
+     [:comments]
+     [:value-meta]
+     [:name "SubjectMobilePhoneNumber"]
+     [:type [:string-type "string"]]
+     [:sub-type [:no-sub-type [:ws ""]]]
+     [:remarks
+      [:remark "Subject mobile phone number (personal) "]
+      [:remark ""]]]]
+   [:iterators]]]
+ [:comments [:comment [:comment-text "# end"]]]]

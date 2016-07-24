@@ -1,0 +1,48 @@
+CDA = record blocks comments
+
+(* record *)
+record = comments record-meta <"r"> <ws> <"|"> <ws> name <ws> <"|"> <ws> root-block <ws> remarks <ws> <eol>
+(* by doing this we allways have the tag for record-meta *)
+record-meta = (<"#@record-meta:"> <ws> meta-data <eol>*)?
+root-block = #"[a-zA-Z][0-9a-zA-Z\+-_]*"
+
+(* block *)
+blocks = block*
+block = comments block-meta <ws> <"b"> <ws> <"|"> <ws> name <ws> remarks <ws> <eol>* values iterators
+block-meta = (<"#@block-meta:"> <ws> meta-data <eol>*)?
+
+(* value *)
+values = value*
+value = comments value-meta <ws> <"v"> <ws> <"|"> <ws> name <ws> <"|"> <ws> type <ws> <"|"> <ws> sub-type <ws> remarks <ws> <eol>*
+value-meta = (<"#@value-meta:"> <ws> meta-data <eol>*)?
+type = string-type | date-type | number-type
+string-type = "string"
+date-type = "date"
+number-type = "number"
+sub-type = date-format | money-sub-type | no-sub-type
+date-format = "YYYYMMDD"
+money-sub-type = "money"
+no-sub-type = ws
+
+(* iterator *)
+iterators = iterator*
+iterator = comments iterator-meta <ws> <"I"> <ws> <"|"> <ws> name <ws> <"|"> <ws> block-name <ws> remarks <ws> <eol>*
+iterator-meta = (<"#@iterator-meta:"> <ws> meta-data <eol>*)?
+block-name = #"[a-zA-Z][0-9a-zA-Z\+-_]*"
+
+(* general/terminals *)
+
+(* by doing this we group all the remarks under one tag *)
+remarks = (<"|"> <ws> remark <ws> <"|">?)*
+remark = #"[^|\r\n]*"
+
+comments = comment*
+comment = <"#"> comment-text <eol>*
+(* added @ exclusion for the first charatcter, after the #, so it triggers the metadata rules instead *)
+comment-text = #"[^@][^\r\n]*"
+
+name = #"[a-zA-Z][0-9a-zA-Z\+-_]*"
+meta-data = #"[^\r\n]*"
+ws = #"[ \t\x0B\f]*"
+eol = #"[\r\n]+"
+

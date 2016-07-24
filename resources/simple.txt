@@ -1,0 +1,21 @@
+## record
+r|   CX
+
+## block
+b|CX
+v|f1
+v|f4
+I|ID
+I|ADDR
+
+## block
+b|ID
+v|id
+v|name
+
+## block
+b|ADDR
+v|city
+v|zip
+
+## end
